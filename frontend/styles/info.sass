@@ -1,0 +1,98 @@
+.chip
+  float: right
+  background-color: #E2E2E2
+  border-radius: 13px
+  height: 25px
+  line-height: 25px
+  font-size: 10px
+  padding-right: 10px
+  margin-top: 7px
+  margin-left: 10px
+  color: #737373
+  i
+    line-height: 25px
+    font-size: 15px
+    border-right: 1px solid #CCC
+    margin-right: 5px
+
+#azimuth
+  background-image: url('/images/azimuth.jpg')
+  height: 204px
+  width: 200px
+  background-size: 200px
+  padding-top: 1px
+  position: relative
+  display: inline-block
+
+  .finger
+    height: 178px
+    margin-top: 11px
+
+  .finger::before
+    height: 89px
+
+#elevation
+  background-image: url('/images/elevation.gif')
+  height: 112px
+  width: 200px
+  background-size: 200px
+  position: relative
+  display: inline-block
+  margin-top: 10px
+
+  .finger
+    height: 196px
+    i
+      margin-top: -120px
+
+  .finger::before
+    height: 98px
+
+  .finger.plant::before
+    width: 1px
+
+  .plant_line
+    height: 2px
+    width: 50px
+    background-color: #000000
+    margin-left: 75px
+    margin-top: 98px
+
+.finger
+  width: 2px
+  position: absolute
+  left: 100px
+
+.finger::before
+  width: 2px
+  display: block
+  content: ''
+
+.finger.sunRiseSet::before
+  background-color: #000000
+  opacity: 0.1
+
+.finger.sun::before
+  background-color: #FFED10
+  opacity: 0.8
+
+.finger.sun i
+  color: #FFED10
+
+
+.finger.plant::before
+      background-color: #000000
+      opacity: 0.8
+
+.finger i
+  display: block
+  margin-top: -110px
+  margin-left: -9px
+  font-size: 20px
+
+.data
+  opacity: 0.8
+  font-size: 11px
+  .seperator
+    margin: 0 10px
+    opacity: 0.3

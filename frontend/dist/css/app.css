@@ -1,0 +1,624 @@
+html {
+  background-color: #7B7B7B; }
+
+.banner {
+  height: 100px;
+  margin: 30px auto;
+  color: #fff;
+  width: 300px; }
+  .banner img {
+    height: 100px;
+    float: left;
+    margin-right: 20px; }
+  .banner #title {
+    font-size: 20px;
+    padding-top: 20px;
+    opacity: 0.8; }
+  .banner #version {
+    font-size: 11px;
+    line-height: 10px;
+    opacity: 0.4; }
+    .banner #version a {
+      color: #fff;
+      font-weight: bold; }
+
+.container {
+  max-width: 500px; }
+
+.collapsible {
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.36), 0 2px 20px 0 rgba(0, 0, 0, 0.12); }
+
+.collapsible-header {
+  background-color: #F5F5F5; }
+  .collapsible-header i {
+    opacity: 0.8; }
+
+.collapsible-body {
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: center; }
+
+#login .input-field {
+  width: 200px;
+  margin: auto;
+  margin-top: 10px; }
+
+#info .chip {
+  float: right;
+  background-color: #E2E2E2;
+  border-radius: 13px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
+  margin-left: 10px;
+  color: #737373; }
+  #info .chip i {
+    line-height: 25px;
+    font-size: 15px;
+    border-right: 1px solid #CCC;
+    margin-right: 5px; }
+
+#info #azimuth {
+  background-image: url("/images/azimuth.jpg");
+  height: 204px;
+  width: 200px;
+  background-size: 200px;
+  padding-top: 1px;
+  position: relative;
+  display: inline-block; }
+  #info #azimuth .finger {
+    height: 178px;
+    margin-top: 11px; }
+  #info #azimuth .finger::before {
+    height: 89px; }
+
+#info #elevation {
+  background-image: url("/images/elevation.gif");
+  height: 112px;
+  width: 200px;
+  background-size: 200px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px; }
+  #info #elevation .finger {
+    height: 196px; }
+    #info #elevation .finger i {
+      margin-top: -120px; }
+  #info #elevation .finger::before {
+    height: 98px; }
+  #info #elevation .finger.plant::before {
+    width: 1px; }
+  #info #elevation .plant_line {
+    height: 2px;
+    width: 50px;
+    background-color: #000000;
+    margin-left: 75px;
+    margin-top: 98px; }
+
+#info .finger {
+  width: 2px;
+  position: absolute;
+  left: 100px; }
+
+#info .finger::before {
+  width: 2px;
+  display: block;
+  content: ''; }
+
+#info .finger.sunRiseSet::before {
+  background-color: #000000;
+  opacity: 0.1; }
+
+#info .finger.sun::before {
+  background-color: #FFED10;
+  opacity: 0.8; }
+
+#info .finger.sun i {
+  color: #FFED10; }
+
+#info .finger.plant::before {
+  background-color: #000000;
+  opacity: 0.8; }
+
+#info .finger i {
+  display: block;
+  margin-top: -110px;
+  margin-left: -9px;
+  font-size: 20px; }
+
+#info .data {
+  opacity: 0.8;
+  font-size: 11px; }
+  #info .data .seperator {
+    margin: 0 10px;
+    opacity: 0.3; }
+
+#control .btn {
+  padding: 0; }
+  #control .btn i {
+    margin: 0 15px; }
+
+#control .label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #555; }
+
+#control p.range-field {
+  padding: 0; }
+
+#control input {
+  width: 28px;
+  text-align: right;
+  height: 30px; }
+
+#control .degree_select a {
+  height: 25px;
+  line-height: 25px;
+  margin-left: 10px; }
+  #control .degree_select a i {
+    margin: 0 10px; }
+
+#control .col {
+  position: relative; }
+
+#control .col.active .stopped {
+  opacity: 0.1; }
+
+#control .col.active .running {
+  display: block; }
+
+#control .running {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  width: 100%;
+  height: 80px;
+  padding-right: 20px; }
+  #control .running a {
+    background-color: #FF0202;
+    padding: 0 10px; }
+    #control .running a i {
+      margin-left: 0; }
+  #control .running .preloader-wrapper {
+    height: 20px;
+    width: 20px; }
+  #control .running .current {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px; }
+
+#control .title {
+  border-bottom: 1px solid #B5B5B5;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #828282; }
+
+#settings .label {
+  color: #6F6F6F;
+  font-size: 13px; }
+
+#settings input {
+  text-align: right;
+  height: 30px; }
+
+#settings .row {
+  margin-bottom: 0; }
+
+#settings .map {
+  width: 100%;
+  background-position: center;
+  height: 150px;
+  margin-bottom: 10px;
+  padding-top: 60px; }
+
+#settings #input_title {
+  text-align: center; }
+
+#calibration .row {
+  margin-bottom: 0; }
+
+#calibration input, #calibration .input-field {
+  height: 20px; }
+
+#calibration a.btn-floating {
+  height: 20px;
+  width: 20px;
+  margin-top: 13px;
+  margin-left: 10px; }
+  #calibration a.btn-floating i {
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    display: block; }
+
+#calibration .calculated {
+  margin-top: 20px; }
+  #calibration .calculated i {
+    font-size: 15px;
+    color: #989898;
+    margin-top: 15px;
+    margin-left: 20px; }
+  #calibration .calculated .input-field {
+    text-align: left; }
+    #calibration .calculated .input-field div {
+      overflow: hidden; }
+  #calibration .calculated a {
+    height: 20px;
+    width: 20px;
+    padding: 0 3px;
+    margin-top: 10px; }
+    #calibration .calculated a i {
+      margin: 0;
+      color: #FFF;
+      line-height: 20px; }
+
+.degree {
+  width: 70px; }
+  .degree input {
+    padding-right: 10px;
+    text-align: right; }
+  .degree::after {
+    content: '\00B0';
+    display: block;
+    float: right;
+    margin-top: -3em;
+    margin-right: -10px; }
+
+.speed {
+  width: 70px;
+  padding-right: 30px !important; }
+  .speed input {
+    padding-right: 30px;
+    text-align: right; }
+  .speed::after {
+    content: 'm/s';
+    display: block;
+    float: right;
+    margin-top: -3em;
+    margin-right: -30px; }
+
+.sliderBox {
+  padding: 0 5%;
+  height: 30px;
+  margin-bottom: 15px; }
+
+/*!
+ * Materialize v0.97.1 (http://materializecss.com)
+ * Copyright 2014-2015 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.noUi-target {
+  position: relative;
+  direction: ltr; }
+
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  /* Fix 401 */ }
+
+.noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+.noUi-handle {
+  position: relative;
+  z-index: 1; }
+
+.noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+   its values is > 50%. */
+  z-index: 10; }
+
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.25s, top 0.25s;
+  transition: left 0.25s, top 0.25s; }
+
+.noUi-state-drag * {
+  cursor: inherit !important; }
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+  height: 18px; }
+
+.noUi-horizontal .noUi-handle {
+  width: 34px;
+  height: 28px;
+  left: -17px;
+  top: -6px; }
+
+.noUi-vertical {
+  width: 18px; }
+
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  left: -6px;
+  top: -17px; }
+
+/* Styling;
+ */
+.noUi-background {
+  background: #FAFAFA;
+  box-shadow: inset 0 1px 1px #f0f0f0; }
+
+.noUi-connect {
+  background: #3FB8AF;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms; }
+
+.noUi-origin {
+  border-radius: 2px; }
+
+.noUi-target {
+  border-radius: 4px;
+  border: 1px solid #D3D3D3;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; }
+
+.noUi-target.noUi-connect {
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #BBB; }
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+  cursor: w-resize; }
+
+.noUi-vertical .noUi-dragable {
+  cursor: n-resize; }
+
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB; }
+
+.noUi-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB; }
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px; }
+
+.noUi-handle:after {
+  left: 17px; }
+
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px; }
+
+.noUi-vertical .noUi-handle:after {
+  top: 17px; }
+
+/* Disabled state;
+ */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+  background: #B8B8B8; }
+
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+  cursor: not-allowed; }
+
+/*Materialize Theming*/
+.noUi-target {
+  box-shadow: none;
+  border: none; }
+
+.noUi-base {
+  height: 15px;
+  top: -6px; }
+
+.noUi-background {
+  height: 3px;
+  top: 6px;
+  background-color: #bfbfbf; }
+
+.noUi-horizontal {
+  height: 3px; }
+
+.noUi-connect {
+  height: 3px;
+  top: 6px;
+  background-color: #26A69A;
+  box-shadow: none; }
+
+/*Handle*/
+.noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: none;
+  background-color: #26A69A;
+  border: none;
+  left: -5px;
+  top: -6px;
+  transition: width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.noUi-handle:before {
+  content: none; }
+
+.noUi-handle:after {
+  content: none; }
+
+/*Handle on Drag*/
+.noUi-target .noUi-active.noUi-handle {
+  width: 3px;
+  height: 3px;
+  left: 0;
+  top: 0; }
+
+.noUi-target .range-label {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: -17px;
+  left: -2px;
+  background-color: #26A69A;
+  border-radius: 50%;
+  transition: border-radius 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: scale(0.5) rotate(-45deg);
+  transform-origin: 50% 100%; }
+
+.noUi-target .noUi-active .range-label {
+  border-radius: 15px 15px 15px 0;
+  transform: rotate(-45deg) translate(23px, -25px); }
+
+.range-label span {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  transform: rotate(45deg);
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: -1px;
+  transition: opacity 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.noUi-active .range-label span {
+  opacity: 1; }
+
+/* Base;
+ *
+ */
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.noUi-pips {
+  position: absolute;
+  font: 400 12px Arial;
+  color: #999; }
+
+/* Values;
+ *
+ */
+.noUi-value {
+  width: 40px;
+  position: absolute;
+  text-align: center; }
+
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px; }
+
+/* Markings;
+ *
+ */
+.noUi-marker {
+  position: absolute;
+  background: #CCC; }
+
+.noUi-marker-sub {
+  background: #AAA; }
+
+.noUi-marker-large {
+  background: #AAA; }
+
+/* Horizontal layout;
+ *
+ */
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 50px;
+  top: 100%;
+  left: 0;
+  width: 100%; }
+
+.noUi-value-horizontal {
+  margin-left: -20px;
+  padding-top: 20px; }
+
+.noUi-value-horizontal.noUi-value-sub {
+  padding-top: 15px; }
+
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px; }
+
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px; }
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px; }
+
+/* Vertical layout;
+ *
+ */
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%; }
+
+.noUi-value-vertical {
+  width: 15px;
+  margin-left: 20px;
+  margin-top: -5px; }
+
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px; }
+
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px; }
+
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px; }
+
+.noUi-pips-horizontal {
+  padding: 0;
+  margin-left: 2px; }
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 10px; }
+
+.noUi-value-horizontal {
+  margin-left: -20px;
+  padding-top: 13px; }

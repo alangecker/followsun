@@ -1,0 +1,19 @@
+{
+    "title": "Lorem Ipsum",
+    "automatic": false,
+    "latitude": 49.0229586,
+    "longitude": 12.0975098,
+    "stormAzimuth": 180,
+    "stormElevation": 70,
+    "stormThreshold": 20,
+    "minAzimuth": 57,
+    "maxAzimuth": 299,
+    "azimuthScale": 2,
+    "azimuthOffset": -520,
+    "azimuthTolerance": 1,
+    "minElevation": 16,
+    "maxElevation": 74,
+    "elevationScale": 1,
+    "elevationOffset": -170,
+    "elevationTolerance": 1
+}
