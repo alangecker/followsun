@@ -8,6 +8,9 @@ module.exports = plant =
   adc: null
 
   setGPIO: (pin, v, cb) ->
+    if config.gpioInverse
+      v = 0 if v
+      v = 1 if not v
     @pins[pin].writeSync v
     cb() if cb
 
