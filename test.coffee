@@ -18,7 +18,7 @@ motorTestAzimuth = (direction)->
     , 10000)
   ,1000)
 
-motorTestAzimuth = (direction)->
+motorTestElevation = (direction)->
   console.log '[motor] Elevation start - Direction: '+direction
   setTimeout(->
     motor.startAzimuth()
