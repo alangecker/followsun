@@ -9,9 +9,7 @@ module.exports = plant =
 
   setGPIO: (pin, v, cb) ->
     if config.gpioInverse
-      v = 0 if v
-      v = 1 if not v
-    console.log "[GPIO] set pin #{pin} to #{v}"
+      v = if v then 0 else 1
     @pins[pin].writeSync v
     cb() if cb
 
@@ -22,6 +20,5 @@ module.exports = plant =
     @adc = new mcp3008(config.spidev)
 
   getSPIValue: (channel, cb) ->
-    console.log "[SPI] read channel #{channel}"
     @adc.read channel, (value) ->
       cb(null, value)

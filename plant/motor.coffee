@@ -11,8 +11,8 @@ module.exports =
     return false if direction != 'right' and direction != 'left'
     @azimuthDirection = direction
 
-    plant.setGPIO(config.azimuthRightPin, 1) if direction is 'right'
-    plant.setGPIO(config.azimuthLeftPin, 1) if direction is 'left'
+    plant.setGPIO(config.azimuthRightPin, if direction is 'right' then 1 else 0)
+    plant.setGPIO(config.azimuthLeftPin, if direction is 'left' then 1 else 0)
 
   # stop azimuth movement
   stopAzimuth: ->
@@ -34,8 +34,8 @@ module.exports =
     return false if direction != 'up' and direction != 'down'
     @elevationDirection = direction
 
-    plant.setGPIO(config.elevationUpPin, 1) if direction is 'up'
-    plant.setGPIO(config.elevationDownPin, 1) if direction is 'down'
+    plant.setGPIO(config.elevationUpPin, if direction is 'up' then 1 else 0)
+    plant.setGPIO(config.elevationDownPin, if direction is 'down' then 1 else 0) 
 
   # stop elevation movement
   stopElevation: ->
