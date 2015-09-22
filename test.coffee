@@ -9,7 +9,7 @@ showStats = ->
   sensor.getCurrentElevation (v,raw) ->
     console.log "[sensor] Elevation: \t#{raw}\t#{v}°"
 
-motorTestAzimuth = (direction)->
+motorTestAzimuth = (direction='right')->
   console.log '[motor] Azimuth start - Direction: '+direction
   setTimeout(->
     motor.startAzimuth()
@@ -18,12 +18,12 @@ motorTestAzimuth = (direction)->
     , 10000)
   ,1000)
 
-motorTestElevation = (direction)->
+motorTestElevation = (direction='up')->
   console.log '[motor] Elevation start - Direction: '+direction
   setTimeout(->
     motor.startAzimuth()
     setTimeout( ->
-      motorTestAzimuth(if direction == 'up' then 'down' else 'up')
+      motorTestElevation(if direction == 'up' then 'down' else 'up')
     , 10000)
   ,1000)
 
