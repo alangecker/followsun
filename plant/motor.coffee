@@ -34,8 +34,8 @@ module.exports =
     return false if direction != 'up' and direction != 'down'
     @elevationDirection = direction
 
-    plant.setGPIO(18, 1) if direction is 'up'
-    plant.setGPIO(19, 1) if direction is 'down'
+    plant.setGPIO(config.elevationUpPin, 1) if direction is 'up'
+    plant.setGPIO(config.elevationDownPin, 1) if direction is 'down'
 
   # stop elevation movement
   stopElevation: ->
