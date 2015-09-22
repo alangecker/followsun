@@ -15,7 +15,7 @@ module.exports = plant =
     @pins[pin] = new gpio(pin, type);
 
   setupSPI: ->
-    @adc = new mp3008(config.spidev)
+    @adc = new mcp3008(config.spidev)
 
   getSPIValue: (channel, cb) ->
     @adc.read channel, (value) ->
