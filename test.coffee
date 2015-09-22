@@ -12,7 +12,7 @@ showStats = ->
 motorTestAzimuth = (direction='right')->
   console.log '[motor] Azimuth start - Direction: '+direction
   setTimeout(->
-    motor.startAzimuth()
+    motor.startAzimuth(direction)
     setTimeout( ->
       motorTestAzimuth(if direction == 'right' then 'left' else 'right')
     , 10000)
@@ -21,7 +21,7 @@ motorTestAzimuth = (direction='right')->
 motorTestElevation = (direction='up')->
   console.log '[motor] Elevation start - Direction: '+direction
   setTimeout(->
-    motor.startAzimuth()
+    motor.startElevation(direction)
     setTimeout( ->
       motorTestElevation(if direction == 'up' then 'down' else 'up')
     , 10000)

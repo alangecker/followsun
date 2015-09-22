@@ -14,8 +14,8 @@ module.exports = config =
   gpioInverse: true
   azimuthRightPin: 4
   azimuthLeftPin: 17
-  elevationUpPin: 11
-  elevationDownPin: 12
+  elevationUpPin: 27
+  elevationDownPin: 22
 
   # SPI
   spidev: '/dev/spidev0.0'
