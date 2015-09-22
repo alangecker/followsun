@@ -2,10 +2,19 @@ config = require '../config'
 helpers = require './helpers'
 sensor = require './sensor'
 motor = require './motor'
+plant = require './plant'
+
 
 module.exports = Controller =
   stormActive: false
 
+  setup: (cb) ->
+    plant.setupSPI()
+    plant.setupGPIO(config.azimuthRightPin, 'out')
+    plant.setupGPIO(config.azimuthLeftPin, 'out')
+    plant.setupGPIO(config.elevationUpPin, 'out')
+    plant.setupGPIO(config.elevationDownPin, 'out')
+    cb()
 
   # start the Auto-Interval
   autoInterval: null

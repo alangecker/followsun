@@ -11,7 +11,7 @@ module.exports = config =
   # Hardware settings
   # ------------------------------
   # GPIO
-  azimuthRightPin: 16
+  azimuthRightPin: 4
   azimuthLeftPin: 17
   elevationUpPin: 11
   elevationDownPin: 12

@@ -1,4 +1,4 @@
-fakePlant = require './fakePlant'
+plant = require './plant'
 config = require '../config'
 
 module.exports =
@@ -11,13 +11,13 @@ module.exports =
     return false if direction != 'right' and direction != 'left'
     @azimuthDirection = direction
 
-    fakePlant.setGPIO(config.azimuthRightPin, 1) if direction is 'right'
-    fakePlant.setGPIO(config.azimuthLeftPin, 1) if direction is 'left'
+    plant.setGPIO(config.azimuthRightPin, 1) if direction is 'right'
+    plant.setGPIO(config.azimuthLeftPin, 1) if direction is 'left'
 
   # stop azimuth movement
   stopAzimuth: ->
-    fakePlant.setGPIO(config.azimuthRightPin, 0)
-    fakePlant.setGPIO(config.azimuthLeftPin, 0)
+    plant.setGPIO(config.azimuthRightPin, 0)
+    plant.setGPIO(config.azimuthLeftPin, 0)
     @azimuthDirection = null
 
 
@@ -34,11 +34,11 @@ module.exports =
     return false if direction != 'up' and direction != 'down'
     @elevationDirection = direction
 
-    fakePlant.setGPIO(18, 1) if direction is 'up'
-    fakePlant.setGPIO(19, 1) if direction is 'down'
+    plant.setGPIO(18, 1) if direction is 'up'
+    plant.setGPIO(19, 1) if direction is 'down'
 
   # stop elevation movement
   stopElevation: ->
-    fakePlant.setGPIO(18, 0)
-    fakePlant.setGPIO(19, 0)
+    plant.setGPIO(18, 0)
+    plant.setGPIO(19, 0)
     @elevationDirection = null
