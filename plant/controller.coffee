@@ -14,6 +14,10 @@ module.exports = Controller =
     plant.setupGPIO(config.azimuthLeftPin, 'out')
     plant.setupGPIO(config.elevationUpPin, 'out')
     plant.setupGPIO(config.elevationDownPin, 'out')
+
+    # set GPIO's pins to default value
+    motor.stopAzimuth()
+    motor.stopElevation()
     cb()
 
   # start the Auto-Interval
@@ -76,6 +80,9 @@ module.exports = Controller =
       if curDegrees > degrees then motor.startAzimuth('left')
       else motor.startAzimuth('right')
 
+      # still an old interval running?
+      clearInterval @azimuthMovementInterval
+
       @azimuthTarget = degrees
       @azimuthMovementInterval = setInterval(@_checkAzimuthMovement, 500)
 
@@ -124,6 +131,9 @@ module.exports = Controller =
       # decide the direction and start
       if curDegrees > degrees then motor.startElevation('down')
       else motor.startElevation('up')
+
+      # still an old interval running?
+      clearInterval @elevationMovementInterval
 
       @elevationTarget = degrees
       @elevationMovementInterval = setInterval(@_checkElevationMovement, 500)
