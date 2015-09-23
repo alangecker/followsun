@@ -8,6 +8,7 @@ module.exports = plant =
   adc: null
 
   setGPIO: (pin, v, cb) ->
+    throw new Error("Pin #{pin} has not been setuped") unless @pins[pin]
     if config.gpioInverse
       v = if v then 0 else 1
     @pins[pin].writeSync v
@@ -15,6 +16,7 @@ module.exports = plant =
 
   setupGPIO: (pin, type) ->
     @pins[pin] = new gpio(pin, type);
+    if
 
   setupSPI: ->
     @adc = new mcp3008(config.spidev)
