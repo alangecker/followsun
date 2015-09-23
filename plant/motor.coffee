@@ -35,10 +35,10 @@ module.exports =
     @elevationDirection = direction
 
     plant.setGPIO(config.elevationUpPin, if direction is 'up' then 1 else 0)
-    plant.setGPIO(config.elevationDownPin, if direction is 'down' then 1 else 0) 
+    plant.setGPIO(config.elevationDownPin, if direction is 'down' then 1 else 0)
 
   # stop elevation movement
   stopElevation: ->
-    plant.setGPIO(18, 0)
-    plant.setGPIO(19, 0)
+    plant.setGPIO(config.elevationUpPin, 0)
+    plant.setGPIO(config.elevationDownPin, 0)
     @elevationDirection = null
