@@ -16,7 +16,6 @@ module.exports = plant =
 
   setupGPIO: (pin, type) ->
     @pins[pin] = new gpio(pin, type);
-    if
 
   setupSPI: ->
     @adc = new mcp3008(config.spidev)
