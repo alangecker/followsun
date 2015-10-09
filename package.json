@@ -7,7 +7,7 @@
     "bower": "^1.5.2",
     "coffee-script": "^1.10.0",
     "express": "^4.13.3",
-    "mcp3308.js": "^0.3.2",
+    "mcp3308.js": "^0.1.0",
     "onoff": "^1.0.2",
     "socket.io": "^1.3.6",
     "suncalc": "^1.6.0"
