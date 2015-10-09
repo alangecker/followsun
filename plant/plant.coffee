@@ -1,5 +1,5 @@
 gpio = require('onoff').Gpio
-mcp3008 = require('mcp3008.js')
+mcp3308 = require('mcp3308.js')
 
 config = require '../config'
 
@@ -18,7 +18,7 @@ module.exports = plant =
     @pins[pin] = new gpio(pin, type);
 
   setupSPI: ->
-    @adc = new mcp3008(config.spidev)
+    @adc = new mcp3308(config.spidev)
 
   getSPIValue: (channel, cb) ->
     @adc.read channel, (value) ->
